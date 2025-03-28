@@ -491,6 +491,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1336,6 +1339,15 @@
   .pr-\[90px\] {
     padding-right: 90px;
   }
+  .pr-\[100px\] {
+    padding-right: 100px;
+  }
+  .pr-\[150px\] {
+    padding-right: 150px;
+  }
+  .pr-\[200px\] {
+    padding-right: 200px;
+  }
   .pb-\[20px\] {
     padding-bottom: 20px;
   }
@@ -1347,6 +1359,18 @@
   }
   .pl-\[47px\] {
     padding-left: 47px;
+  }
+  .pl-\[100px\] {
+    padding-left: 100px;
+  }
+  .pl-\[150px\] {
+    padding-left: 150px;
+  }
+  .pl-\[200px\] {
+    padding-left: 200px;
+  }
+  .pl-\[470px\] {
+    padding-left: 470px;
   }
   .text-center {
     text-align: center;
@@ -2078,6 +2102,11 @@
       font-size: 20px;
     }
   }
+  .max-\[880px\]\:justify-between {
+    @media (width < 880px) {
+      justify-content: space-between;
+    }
+  }
   .max-\[800px\]\:top-\[51\%\] {
     @media (width < 800px) {
       top: 51%;
@@ -2118,9 +2147,39 @@
       color: var(--color-white);
     }
   }
+  .max-\[600px\]\:flex {
+    @media (width < 600px) {
+      display: flex;
+    }
+  }
+  .max-\[600px\]\:w-full {
+    @media (width < 600px) {
+      width: 100%;
+    }
+  }
   .max-\[600px\]\:grid-cols-1 {
     @media (width < 600px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .max-\[600px\]\:flex-col {
+    @media (width < 600px) {
+      flex-direction: column;
+    }
+  }
+  .max-\[600px\]\:justify-between {
+    @media (width < 600px) {
+      justify-content: space-between;
+    }
+  }
+  .max-\[600px\]\:pr-\[150px\] {
+    @media (width < 600px) {
+      padding-right: 150px;
+    }
+  }
+  .max-\[600px\]\:pl-\[150px\] {
+    @media (width < 600px) {
+      padding-left: 150px;
     }
   }
   .max-\[576px\]\:h-\[496px\] {
@@ -2141,6 +2200,11 @@
   .max-\[570px\]\:w-\[100\%\] {
     @media (width < 570px) {
       width: 100%;
+    }
+  }
+  .max-\[570px\]\:justify-between {
+    @media (width < 570px) {
+      justify-content: space-between;
     }
   }
   .max-\[560px\]\:top-\[8\%\] {
@@ -2261,6 +2325,16 @@
   .max-\[360px\]\:h-\[640px\] {
     @media (width < 360px) {
       height: 640px;
+    }
+  }
+  .max-\[90px\]\:justify-between {
+    @media (width < 90px) {
+      justify-content: space-between;
+    }
+  }
+  .max-\[0px\]\:justify-between {
+    @media (width < 0px) {
+      justify-content: space-between;
     }
   }
 }
